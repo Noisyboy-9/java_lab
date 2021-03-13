@@ -1,4 +1,5 @@
 public class MusicPlayer {
+    // The current player. It might be null.
     private boolean isPlaying;
 
     /**
