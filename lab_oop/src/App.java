@@ -15,13 +15,18 @@ public class App {
         Student student3 = new Student("john", "Doe", "9931058");
         student3.setGrade(19);
 
-        Lab lab = new Lab("shanbe 8:00Am", 50);
-        lab.enrollStudent(student1);
-        lab.enrollStudent(student2);
-        lab.enrollStudent(student3);
+        Lab lab1 = new Lab("shanbe 8:00Am", 50);
+        lab1.setStudents(new Student[] { student1, student2, student3 });
+        lab1.calculateGradesAverage();
 
-        lab.calculateGradesAverage();
-        lab.print();
+        Lab lab2 = new Lab("yekshanbe 8:00Am", 50);
+        lab2.setStudents(new Student[] { student1, student2, student3 });
+        lab2.calculateGradesAverage();
+
+        University university = new University(2);
+        university.addLab(lab1);
+        university.addLab(lab2);
+
+        university.printLabs();
     }
-
 }

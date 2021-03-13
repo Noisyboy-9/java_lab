@@ -74,6 +74,17 @@ public class Lab {
     }
 
     /**
+     * enroll an array of students
+     * 
+     * @param students
+     */
+    public void setStudents(Student[] students) {
+        for (int i = 0; i < students.length; i++) {
+            this.enrollStudent(students[i]);
+        }
+    }
+
+    /**
      * print all enrolled students data
      */
     public void print() {
