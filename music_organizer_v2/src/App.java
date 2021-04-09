@@ -45,6 +45,5 @@ public class App {
  * be the last item index? can we add items in the middle of the array ?the last
  * item index will be 18,and can specify for the array list add method as first
  * parameter for addition position
- * 
- * 
+ *
  */

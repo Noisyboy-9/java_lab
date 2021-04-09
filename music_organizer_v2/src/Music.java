@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Music {
     private String name;
@@ -7,7 +8,7 @@ public class Music {
 
     /**
      * get name of the music
-     * 
+     *
      * @return String
      */
     public String getName() {
@@ -16,7 +17,7 @@ public class Music {
 
     /**
      * get release date of music
-     * 
+     *
      * @return LocalDate
      */
     public LocalDate getReleaseDate() {
@@ -25,7 +26,7 @@ public class Music {
 
     /**
      * set release date of music
-     * 
+     *
      * @param releaseDate
      */
     public void setReleaseDate(LocalDate releaseDate) {
@@ -39,7 +40,7 @@ public class Music {
 
     /**
      * get signer name of music
-     * 
+     *
      * @return String
      */
     public String getSinger() {
@@ -48,7 +49,7 @@ public class Music {
 
     /**
      * set singer of music
-     * 
+     *
      * @param singer
      */
     public void setSinger(String singer) {
@@ -57,7 +58,7 @@ public class Music {
 
     /**
      * set name of music
-     * 
+     *
      * @param name
      */
     public void setName(String name) {
@@ -66,7 +67,7 @@ public class Music {
 
     /**
      * create a music
-     * 
+     *
      * @param name
      * @param singer
      * @param releaseDate
@@ -82,5 +83,18 @@ public class Music {
         System.out.println("singer:" + this.getSinger());
         System.out.println("release date: " + this.getReleaseDate().toString());
         System.out.println("**************************************************************");
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        Music music = (Music) object;
+        return name.equals(music.name) && singer.equals(music.singer) && releaseDate.equals(music.releaseDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, singer, releaseDate);
     }
 }

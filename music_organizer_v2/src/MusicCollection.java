@@ -7,7 +7,7 @@ public class MusicCollection {
 
     /**
      * Create a collection of musics that can be played
-     * 
+     *
      * @param player
      */
     public MusicCollection(MusicPlayer player) {
@@ -29,7 +29,6 @@ public class MusicCollection {
 
     /**
      * print list of all favourite musics
-     * 
      */
     public void listFavourites() {
         for (Music music : this.favourites) {
@@ -39,7 +38,7 @@ public class MusicCollection {
 
     /**
      * add a music to favourites
-     * 
+     *
      * @param music
      */
     public void addToFavourite(Music music) {
@@ -53,7 +52,7 @@ public class MusicCollection {
 
     /**
      * add a music to favourites
-     * 
+     *
      * @param index
      */
     public void addToFavourite(int index) {
@@ -68,7 +67,7 @@ public class MusicCollection {
 
     /**
      * remove music from favourites
-     * 
+     *
      * @param music
      */
     public void removeFromFavourites(Music music) {
@@ -82,7 +81,7 @@ public class MusicCollection {
 
     /**
      * remove music from favourites
-     * 
+     *
      * @param index
      */
     public void removeFromFavourites(int index) {
@@ -96,16 +95,20 @@ public class MusicCollection {
 
     /**
      * add music to collection
-     * 
+     *
      * @param music
      */
-    public void addMusic(Music music) {
+    public void addMusic(Music music) throws Exception {
+        if (this.musics.contains(music)) {
+            throw new Exception("Music can not be duplicate");
+        }
+
         this.musics.add(music);
     }
 
     /**
      * get number of musics saved
-     * 
+     *
      * @return int
      */
     public int countSavedMusics() {
@@ -114,7 +117,7 @@ public class MusicCollection {
 
     /**
      * print the music data at given index
-     * 
+     *
      * @param index
      */
     public void listMusic(int index) {
@@ -142,7 +145,7 @@ public class MusicCollection {
 
     /**
      * remove music at given index if index is valid
-     * 
+     *
      * @param index
      */
     public void removeMusic(int index) {
@@ -161,7 +164,7 @@ public class MusicCollection {
 
     /**
      * start playing of music
-     * 
+     *
      * @param music
      */
     public void startPlaying(Music music) {
@@ -174,11 +177,11 @@ public class MusicCollection {
 
     /**
      * start playing of music
-     * 
+     *
      * @param index
      */
     public void startPlaying(int index) {
-        Music music;
+        Music music = null;
         try {
             music = this.musics.get(index);
         } catch (IndexOutOfBoundsException exception) {
