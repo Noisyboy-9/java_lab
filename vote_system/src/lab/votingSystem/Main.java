@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-
     public static void main(String[] args) throws InvalidVotingTypeException {
         VotingSystem system = new VotingSystem();
         ArrayList<String> voting1Options = new ArrayList<String>(Arrays.asList("yes", "no"));
@@ -40,7 +39,7 @@ public class Main {
 
         ArrayList<String> person1SelectedOptions = new ArrayList<String>(Arrays.asList("Yes, it is good", "No it is bad"));
         ArrayList<String> person2SelectedOptions = new ArrayList<String>(Arrays.asList("No it is bad"));
-        ArrayList<String> person3SelectedOptions = new ArrayList<String>(Arrays.asList("No it is bad", "So So"));
+        ArrayList<String> person3SelectedOptions = new ArrayList<String>(Arrays.asList("No it is bad", "Yes, it is good", "So So"));
 
         try {
             system.vote(voting2, person1, person1SelectedOptions);
