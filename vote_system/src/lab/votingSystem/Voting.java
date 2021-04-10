@@ -1,5 +1,6 @@
 package lab.votingSystem;
 
+import ir.huri.jcal.JalaliCalendar;
 import lab.votingSystem.enums.VotingTypeHandler;
 import lab.votingSystem.exceptions.DuplicateVoterException;
 import lab.votingSystem.exceptions.InvalidVotingTypeException;
@@ -93,7 +94,7 @@ public class Voting {
             if (!this.resultsPerOption.containsKey(selectedOption)) {
 //                this is the first vote for this option
                 HashSet<Vote> voteSet = new HashSet<Vote>();
-                voteSet.add(new Vote(voter, new Date()));
+                voteSet.add(new Vote(voter, new JalaliCalendar()));
 
                 this.resultsPerOption.put(selectedOption, voteSet);
                 continue;
@@ -101,7 +102,7 @@ public class Voting {
 
 //            this isn't the first vote for this option
             HashSet<Vote> voteSet = this.resultsPerOption.get(selectedOption);
-            voteSet.add(new Vote(voter, new Date()));
+            voteSet.add(new Vote(voter, new JalaliCalendar()));
 
             this.resultsPerOption.put(selectedOption, voteSet);
         }
@@ -131,7 +132,7 @@ public class Voting {
                 this.resultsPerOption.get(selectedOption) :
                 new HashSet<Vote>();
 
-        voteSet.add(new Vote(voter, new Date()));
+        voteSet.add(new Vote(voter, new JalaliCalendar()));
 
         this.resultsPerOption.put(selectedOption, voteSet);
     }

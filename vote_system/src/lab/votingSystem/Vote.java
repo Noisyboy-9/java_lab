@@ -1,5 +1,7 @@
 package lab.votingSystem;
 
+import ir.huri.jcal.JalaliCalendar;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -9,7 +11,7 @@ import java.util.Objects;
  */
 public final class Vote {
     private final Person voter;
-    private final Date date;
+    private final JalaliCalendar date;
 
     /**
      * Instantiates a new Vote.
@@ -17,7 +19,7 @@ public final class Vote {
      * @param voter the voter
      * @param date  the date
      */
-    public Vote(Person voter, Date date) {
+    public Vote(Person voter, JalaliCalendar date) {
         this.voter = voter;
         this.date = date;
     }
@@ -36,7 +38,7 @@ public final class Vote {
      *
      * @return the date
      */
-    public Date getDate() {
+    public JalaliCalendar getDate() {
         return date;
     }
 
