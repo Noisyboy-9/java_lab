@@ -30,6 +30,8 @@ public class NoteManager {
 
     /**
      * Show all notes.
+     *
+     * @throws IOException the io exception
      */
     public void showAllNotes() throws IOException {
         if (this.database.length() == 0) {
@@ -58,6 +60,8 @@ public class NoteManager {
 
     /**
      * Handle create new note.
+     *
+     * @throws IOException the io exception
      */
     public void handleCreateNewNote() throws IOException {
 //        get user input
@@ -116,7 +120,7 @@ public class NoteManager {
     /**
      * Handle note delete.
      *
-     * @throws FileNotFoundException the file not found exception
+     * @throws IOException the io exception
      */
     public void handleNoteDelete() throws IOException {
         if (this.database.length() == 0) {
@@ -194,6 +198,11 @@ public class NoteManager {
         return null;
     }
 
+    /**
+     * Handle show note.
+     *
+     * @throws IOException the io exception
+     */
     public void HandleShowNote() throws IOException {
         Note note = this.fetchMatchingNoteWithDatabase();
 
