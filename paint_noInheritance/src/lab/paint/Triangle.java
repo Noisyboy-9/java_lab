@@ -74,6 +74,8 @@ public class Triangle {
         System.out.println("side1 : " + this.sides.get(0));
         System.out.println("side2 : " + this.sides.get(1));
         System.out.println("side3 : " + this.sides.get(2));
+        System.out.println("area:" + this.calculateArea());
+        System.out.println("perimeter:" + this.calculatePerimeter());
     }
 
     @Override

@@ -71,7 +71,7 @@ public class Rectangle {
     public void draw() {
         System.out.println("Rectangle");
         System.out.println("width: " + this.sides.get(0));
-        System.out.println("width: " + this.sides.get(1));
+        System.out.println("height: " + this.sides.get(1));
     }
 
     @Override
