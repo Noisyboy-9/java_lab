@@ -64,8 +64,6 @@ public class Main {
         } else {
             return MainMenuOrderEnum.EXIT;
         }
-
-//        invalid order entered
     }
 
 

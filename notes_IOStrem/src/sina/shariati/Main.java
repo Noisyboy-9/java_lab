@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, InvalidMenuOrderException {
-
         showMainMenu();
 
         File db = new File("src/sina/shariati/database/notes.database.binary");
@@ -29,6 +28,7 @@ public class Main {
             mainMenuOrder = getMenuOrder();
         }
 
+//        order is exit
         System.out.println("hope you have enjoyed :)");
     }
 
