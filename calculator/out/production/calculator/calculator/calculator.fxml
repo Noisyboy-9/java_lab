@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="235.0" prefWidth="348.0" fx:controller="calculator.CalculatorController"
+          xmlns:fx="https://javafx.com/javafx">
+    <columnConstraints>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="20.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="20.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="20.0"/>
+        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="20.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS"/>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <TextField GridPane.columnSpan="3" fx:id="textField"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleAcOperatorClickEvent" prefHeight="30.0" prefWidth="68.0"
+            text="AC" GridPane.columnIndex="3"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="70.0"
+            text="2" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="2" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="5" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="0" GridPane.rowIndex="4"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="1" GridPane.rowIndex="3"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="4" GridPane.rowIndex="2"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="70.0"
+            text="7" GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleFloatOperatorClickEvent" prefHeight="30.0"
+            prefWidth="83.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="70.0"
+            text="3" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleDivisionOperatorClickEvent" prefHeight="30.0"
+            prefWidth="68.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleEqualOperatorClickEvent" prefHeight="30.0"
+            prefWidth="83.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="3" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleNumberClickedEvent" prefHeight="30.0" prefWidth="83.0"
+            text="6" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleCrossOperatorClickEvent" prefHeight="30.0"
+            prefWidth="83.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleSubtractClickEvent" prefHeight="30.0" prefWidth="83.0"
+            text="-" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+    <Button mnemonicParsing="false" onMouseClicked="#handleSumOperatorClickEvent" prefHeight="30.0" prefWidth="83.0"
+            text="+" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+</GridPane>
